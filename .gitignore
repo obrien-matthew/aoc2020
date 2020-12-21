@@ -1,0 +1,11 @@
+
+__pycache__/
+*.log
+.vscode/
+secrets.py
+*.txt
+*.csv
+.*
+!.gitignore
+venv/
+
