@@ -38,7 +38,7 @@ PP_FIELDS = [
 
 
 def main():
-    with open('days/04/input.txt', 'r') as infile:
+    with open('days/day04/input.txt', 'r') as infile:
         data = infile.read()
     
     data = data.split('\n\n')

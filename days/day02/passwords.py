@@ -17,7 +17,7 @@ POLICY_SPLIT = ': '
 POLICY_PATTERN = r'(?P<min>\d+)-(?P<max>\d+)\s(?P<char>.{1})'
 
 def main():
-    with open('days/02/input.txt', 'r') as infile:
+    with open('days/day02/input.txt', 'r') as infile:
         data = infile.read()
     
     valid1_count = 0

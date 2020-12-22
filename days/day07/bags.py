@@ -70,7 +70,7 @@ def contains(bagtype, data):
 
 
 def main():
-    with open('days/07/input.txt', 'r') as infile:
+    with open('days/day07/input.txt', 'r') as infile:
         data = infile.read()
     
     data = process(data)

@@ -28,7 +28,7 @@ VELOCITIES = [
 TREE = '#'
 
 def main():
-    with open('days/03/input.txt', 'r') as infile:
+    with open('days/day03/input.txt', 'r') as infile:
         data = infile.read()
     
     tdata = data.split('\n')

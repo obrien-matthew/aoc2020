@@ -69,7 +69,7 @@ def parttwo(ip, acc, indexes, instr, try_switch=True):
 
 def main():
 
-    with open('days/08/input.txt', 'r') as infile:
+    with open('days/day08/input.txt', 'r') as infile:
         data = infile.read()
     
     instructions = data.split('\n')[:-1]

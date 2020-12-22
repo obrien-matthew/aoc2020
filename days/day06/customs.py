@@ -15,7 +15,7 @@ logging.basicConfig(
 
 
 def main():
-    with open('days/06/input.txt', 'r') as infile:
+    with open('days/day06/input.txt', 'r') as infile:
         data = infile.read()
     
     data = data[:-1].split('\n\n')

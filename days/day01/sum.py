@@ -20,16 +20,31 @@ logging.basicConfig(
 SUM_TO = 2020
 SUM_WITH = 3
 
-def rec_sum(remain, sofar, prev, data):
+def rec_sum(remain, sofar, prev, data, sum_to):
+    '''
+    Recursive function to get `sum_with` integers from a list of 
+        integers which sum to `sum_to`.
+    Returns the list of summable integers or None.
+
+    Args:
+        remain ([type]): [description]
+        sofar ([type]): [description]
+        prev ([type]): [description]
+        data ([type]): [description]
+        sum_to ([type]): [description]
+
+    Returns:
+        list: The list of summable integers or None.
+    '''
     if remain == 0:
-        if sofar == SUM_TO: return prev
+        if sofar == sum_to: return prev
         else: return None
     ilen = len(data)
     for i in range(ilen):
         if i in prev: continue
         cprev = deepcopy(prev)
         cprev.append(data[i])
-        ret = rec_sum(remain-1, sofar+data[i], cprev, data)
+        ret = rec_sum(remain-1, sofar+data[i], cprev, data, sum_to)
         if not ret:
             continue
         return ret
@@ -38,12 +53,12 @@ def rec_sum(remain, sofar, prev, data):
 
 def main():
 
-    with open('days/01/input.txt', 'r') as infile:
+    with open('days/day01/input.txt', 'r') as infile:
         data = infile.read()
     
     data = data.split('\n')[:-1]
     data = [int(x) for x in data]
-    ans = rec_sum(SUM_WITH, 0, list(), data)
+    ans = rec_sum(SUM_WITH, 0, list(), data, SUM_TO)
     return prod(ans)
 
 if __name__ == '__main__':

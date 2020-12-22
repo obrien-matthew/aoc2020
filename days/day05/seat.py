@@ -25,7 +25,7 @@ def get(bpass, rem, total=0):
     return get(bpass[1:], rem-(rem//2), to_add)
 
 def main():
-    with open('days/05/input.txt', 'r') as infile:
+    with open('days/day05/input.txt', 'r') as infile:
         data = infile.read()
     
     data = data.split('\n')[:-1]

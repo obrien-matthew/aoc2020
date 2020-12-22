@@ -27,7 +27,7 @@ def main():
     logging.info(f'Fetching: {url}')
     r = requests.get(url, cookies=secrets.SESSION_COOKIE)
     r.raise_for_status()
-    f = f'days/{day:0>2}/input.txt'
+    f = f'days/day{day:0>2}/input.txt'
     logging.info(f'Writing to {f}')
     with open(f, 'wb+') as outfile:
         outfile.write(r.content)
