@@ -63,7 +63,7 @@ def main():
     '''
     Memoization Table:
         - Array of `len(num_adapters)`
-        - Ways to get from adapter[i] -> adapter[x] == sum((ways to get from adapter[j] -> adapter[k])) for adapter[j] such that adapter[j] reachable *directly* by adapter[i]
+        - Ways to get from adapter[i] -> adapter[k] == sum((ways to get from adapter[j] -> adapter[k])) for adapter[j] such that adapter[j] reachable *directly* by adapter[i]
 
     Example:
         adapters = [ 0, 2, 3, 4, 5, 7 ]
